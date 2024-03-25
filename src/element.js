@@ -2,7 +2,7 @@ import { create, sel, selOrCreate } from './lib.js'
 
 const DEFAULT_LABEL = 'Run'
 
-class RunSnip extends HTMLElement {
+class RunSnipElement extends HTMLElement {
 	connectedCallback() {
 		this.htmlEl = selOrCreate(this.getAttribute('html'), 'div')
 		this.cssEl = selOrCreate(this.getAttribute('css'), 'style')
@@ -86,4 +86,4 @@ class RunSnip extends HTMLElement {
 	}
 }
 
-export default RunSnip
+export default RunSnipElement

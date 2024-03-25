@@ -1,3 +1,3 @@
-import RunSnip from './element.js'
+import RunSnipElement from './element.js'
 
-export default RunSnip
+export default RunSnipElement
