@@ -1,4 +1,4 @@
-/*! runsnip v0.1.2 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
+/*! runsnip v0.2.0 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
 const create = document.createElement.bind(document);
 const sel = document.querySelector.bind(document);
 const selOrCreate = (query, tag) => sel(query) || create(tag);
