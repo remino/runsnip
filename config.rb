@@ -53,6 +53,7 @@ configure :build do
 
 	ignore '/nav/*'
 	ignore '/index.html'
+  ignore '/runsnip/demo.html'
 end
 
 # activate :external_pipeline,
@@ -68,7 +69,6 @@ activate :external_pipeline,
 	latency: 2
 
 ignore '.DS_Store'
-ignore '/scrollerful/demo/demo.html'
 
 page '/*.json', layout: false
 page '/*.txt', layout: false
