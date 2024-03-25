@@ -67,6 +67,7 @@ class RunSnipElement extends HTMLElement {
 		style.textContent = this.css
 
 		const script = create('script')
+		script.setAttribute('crossorigin', '')
 		script.setAttribute('defer', '')
 		script.textContent = this.js
 
