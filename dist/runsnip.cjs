@@ -1,4 +1,4 @@
-/*! runsnip v0.2.0 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
+/*! runsnip v0.2.1 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
@@ -11,7 +11,7 @@
 
 	const DEFAULT_LABEL = 'Run';
 
-	class RunSnip extends HTMLElement {
+	class RunSnipElement extends HTMLElement {
 		connectedCallback() {
 			this.htmlEl = selOrCreate(this.getAttribute('html'), 'div');
 			this.cssEl = selOrCreate(this.getAttribute('css'), 'style');
@@ -76,6 +76,7 @@
 			style.textContent = this.css;
 
 			const script = create('script');
+			script.setAttribute('crossorigin', '');
 			script.setAttribute('defer', '');
 			script.textContent = this.js;
 
@@ -95,6 +96,6 @@
 		}
 	}
 
-	return RunSnip;
+	return RunSnipElement;
 
 }));
