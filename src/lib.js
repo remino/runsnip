@@ -1,4 +1,4 @@
-export const create = document.createElement.bind(document)
+export const create = (tagName, doc = document) => doc.createElement(tagName)
 export const sel = document.querySelector.bind(document)
 export const selOrCreate = (query, tag) => sel(query) || create(tag)
 

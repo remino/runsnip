@@ -48,6 +48,23 @@ class RunSnipElement extends HTMLElement {
 		return this.jsEl.value || this.jsEl.textContent
 	}
 
+	render(iframe) {
+		const { contentDocument: doc } = iframe
+
+		const style = create('style', doc)
+		style.textContent = this.css
+
+		const script = create('script', doc)
+		script.setAttribute('crossorigin', '')
+		script.setAttribute('defer', '')
+		script.textContent = this.js
+
+		doc.head.innerHTML = this.head
+		doc.head.appendChild(style)
+		doc.body.innerHTML = this.html
+		doc.body.appendChild(script)
+	}
+
 	run() {
 		if (
 			!document.contains(this.outputEl)
@@ -62,22 +79,13 @@ class RunSnipElement extends HTMLElement {
 		}
 
 		const iframe = create('iframe')
-
-		const style = create('style')
-		style.textContent = this.css
-
-		const script = create('script')
-		script.setAttribute('crossorigin', '')
-		script.setAttribute('defer', '')
-		script.textContent = this.js
+		iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin')
+		iframe.setAttribute('srcdoc', '<!DOCTYPE html>')
 
 		this.outputEl.innerHTML = ''
 		this.outputEl.appendChild(iframe)
 
-		iframe.contentDocument.head.innerHTML = this.head
-		iframe.contentDocument.head.appendChild(style)
-		iframe.contentDocument.body.innerHTML = this.html
-		iframe.contentDocument.body.appendChild(script)
+		iframe.addEventListener('load', () => this.render(iframe))
 	}
 
 	submit(event) {
