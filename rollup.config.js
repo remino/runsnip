@@ -42,34 +42,34 @@ const pluginsCompact = [sassPlugin, uglifyPlugin]
 export default [
 	{
 		...options,
-		input: 'src/runin.js',
+		input: 'src/runsnip.js',
 		output: [
 			{
 				...output,
-				file: 'dist/runin.cjs',
+				file: 'dist/runsnip.cjs',
 				format: 'umd',
-				name: 'runin',
+				name: 'runsnip',
 			},
 			{
 				...output,
-				file: 'dist/runin.mjs',
+				file: 'dist/runsnip.mjs',
 				format: 'es',
 			},
 		],
 	},
 	{
 		...options,
-		input: 'src/runin.js',
+		input: 'src/runsnip.js',
 		output: [
 			{
 				...outputCompact,
-				file: 'dist/runin.min.js',
+				file: 'dist/runsnip.min.js',
 				format: 'umd',
-				name: 'runin',
+				name: 'runsnip',
 			},
 			{
 				...outputCompact,
-				file: 'dist/runin.min.mjs',
+				file: 'dist/runsnip.min.mjs',
 				format: 'es',
 			},
 		],
@@ -80,9 +80,9 @@ export default [
 		input: 'src/auto.js',
 		output: {
 			...outputCompact,
-			file: 'dist/runin-auto.min.js',
+			file: 'dist/runsnip-auto.min.js',
 			format: 'umd',
-			name: 'runin',
+			name: 'runsnip',
 		},
 		plugins: pluginsCompact,
 	},
@@ -90,9 +90,9 @@ export default [
 		...options,
 		input: 'assets/js/index.js',
 		output: {
-			file: '.build/js/runin/script.js',
+			file: '.build/js/runsnip/script.js',
 			format: 'umd',
-			name: 'runin',
+			name: 'runsnip',
 		},
 		plugins: pluginsCompact,
 	},

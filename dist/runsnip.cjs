@@ -1,8 +1,8 @@
-/*! @remino/runin v0.1.0 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
+/*! @remino/runsnip v0.1.0 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
-	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.runin = factory());
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.runsnip = factory());
 })(this, (function () { 'use strict';
 
 	const create = document.createElement.bind(document);
@@ -11,7 +11,7 @@
 
 	const RUNIN_DEFAULT_LABEL = 'Run';
 
-	class RunIn extends HTMLElement {
+	class RunSnip extends HTMLElement {
 		connectedCallback() {
 			this.htmlEl = selOrCreate(this.getAttribute('html'), 'div');
 			this.cssEl = selOrCreate(this.getAttribute('css'), 'style');
@@ -80,6 +80,6 @@
 		}
 	}
 
-	return RunIn;
+	return RunSnip;
 
 }));

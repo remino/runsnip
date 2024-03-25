@@ -1,11 +1,11 @@
-RunIn
+RunSnip
 =====
 
 By Rémino Rem <https://remino.net>
 
 Small library to run snippets of HTML, CSS, and JavaScript in place.
 
-<https://remino.net/runin/>
+<https://remino.net/runsnip/>
 
 - [About](#about)
 - [Getting Started](#getting-started)
@@ -21,25 +21,25 @@ Small library to run snippets of HTML, CSS, and JavaScript in place.
 
 https://user-images.githubusercontent.com/29999/210556744-519eccd4-27c2-4f58-a9a3-37f2837338b8.mp4
 
-**RunIn** is a small library that allows you to run snippets of HTML, CSS, and JavaScript in place. Write your code in your HTML page as plain text, and have this library run it on the page for you.
+**RunSnip** is a small library that allows you to run snippets of HTML, CSS, and JavaScript in place. Write your code in your HTML page as plain text, and have this library run it on the page for you.
 
-[Back to top](#runin)
+[Back to top](#runsnip)
 
 
 
 ## Getting Started
 
-You can either clone the repo, download the [latest release file](https://github.com/remino/runin/releases), or install it using npm:
+You can either clone the repo, download the [latest release file](https://github.com/remino/runsnip/releases), or install it using npm:
 
 ```sh
 # Clone the repo
-git clone git@github.com:remino/runin.git
+git clone git@github.com:remino/runsnip.git
 
 # Install using npm
-npm add @remino/runin
+npm add @remino/runsnip
 ```
 
-[Back to top](#runin)
+[Back to top](#runsnip)
 
 
 
@@ -65,23 +65,23 @@ npm add @remino/runin
 <output id="output"></output>
 ```
 
-**Step 2.** Add the `RunIn` element.
+**Step 2.** Add the `RunSnip` element.
 
 ```html
-<run-in html="#html" css="#css" js="#js" output="#output"></run-in>
+<run-snip html="#html" css="#css" js="#js" output="#output"></run-snip>
 ```
 
 **Step 3.** Add the auto-start script.
 
 ```html
-<script src="runin-auto.min.js"></script>
+<script src="runsnip-auto.min.js"></script>
 ```
 
 **Step 4.** Run in!
 
 The "Run In" button will appear on the page. Click it to run the code.
 
-[Back to top](#runin)
+[Back to top](#runsnip)
 
 
 ## To Do
@@ -94,7 +94,7 @@ For others to feel more confident in using this, here are a few things to do:
 - Add better documentation. (There are a few features this library does that is not documented here yet.)
 - Add more examples.
 
-[Back to top](#runin)
+[Back to top](#runsnip)
 
 
 ## Contributing
@@ -110,7 +110,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-[Back to top](#runin)
+[Back to top](#runsnip)
 
 
 
@@ -118,7 +118,7 @@ Don't forget to give the project a star! Thanks again!
 
 Distributed under the ISC License. See `LICENSE.txt` for more information.
 
-[Back to top](#runin)
+[Back to top](#runsnip)
 
 
 
@@ -127,4 +127,4 @@ Distributed under the ISC License. See `LICENSE.txt` for more information.
 Rémino Rem
 https://remino.net/
 
-[Back to top](#runin)
+[Back to top](#runsnip)

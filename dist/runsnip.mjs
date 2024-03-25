@@ -1,11 +1,11 @@
-/*! @remino/runin v0.1.0 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
+/*! @remino/runsnip v0.1.0 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
 const create = document.createElement.bind(document);
 const sel = document.querySelector.bind(document);
 const selOrCreate = (query, tag) => sel(query) || create(tag);
 
 const RUNIN_DEFAULT_LABEL = 'Run';
 
-class RunIn extends HTMLElement {
+class RunSnip extends HTMLElement {
 	connectedCallback() {
 		this.htmlEl = selOrCreate(this.getAttribute('html'), 'div');
 		this.cssEl = selOrCreate(this.getAttribute('css'), 'style');
@@ -74,4 +74,4 @@ class RunIn extends HTMLElement {
 	}
 }
 
-export { RunIn as default };
+export { RunSnip as default };

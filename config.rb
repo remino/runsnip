@@ -57,7 +57,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/*.xml', layout: false
 
-prefix = '/runin'
+prefix = '/runsnip'
 
 set :source, 'pages'
 set :build_dir, 'build'

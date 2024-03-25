@@ -3,7 +3,7 @@ export const sel = document.querySelector.bind(document)
 export const selOrCreate = (query, tag) => sel(query) || create(tag)
 
 export const runIn = (options = {}) => {
-	const el = document.createElement('run-in')
+	const el = document.createElement('run-snip')
 
 	Array.from(
 		['append', 'css', 'js', 'html', 'output', 'submit'],

@@ -3,7 +3,7 @@
 		"name": "Rémino Rem",
 		"url": "https://remino.net/"
 	},
-	"browser": "dist/runin.cjs",
+	"browser": "dist/runsnip.cjs",
 	"dependencies": {
 		"@lopatnov/rollup-plugin-uglify": "^2.1.5",
 		"@remino/reslib": "git+ssh://terabako/~/git/remino/reslib.git#v0.3.28",
@@ -34,13 +34,13 @@
 	},
 	"description": "Small library to run snippets of HTML, CSS, and JavaScript in place.",
 	"exports": {
-		"import": "./dist/runin.mjs",
-		"require": "./dist/runin.cjs"
+		"import": "./dist/runsnip.mjs",
+		"require": "./dist/runsnip.cjs"
 	},
 	"files": [
 		"dist/*"
 	],
-	"homepage": "https://remino.net/runin/",
+	"homepage": "https://remino.net/runsnip/",
 	"keywords": [
 		"javascript",
 		"css",
@@ -48,11 +48,11 @@
 		"scroll"
 	],
 	"license": "ISC",
-	"main": "dist/runin.cjs",
-	"name": "@remino/runin",
+	"main": "dist/runsnip.cjs",
+	"name": "@remino/runsnip",
 	"scripts": {
-		"css:build": "npx sass --load-path=node_modules/ assets/css/:.build/css/runin/",
-		"css:watch": "npx sass --watch --load-path=node_modules/ assets/css/:.build/css/runin/",
+		"css:build": "npx sass --load-path=node_modules/ assets/css/:.build/css/runsnip/",
+		"css:watch": "npx sass --watch --load-path=node_modules/ assets/css/:.build/css/runsnip/",
 		"js:build": "npx rollup --config rollup.config.js",
 		"js:watch": "npx rollup --config rollup.config.js --watch",
 		"lint": "npx eslint",

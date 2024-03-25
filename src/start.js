@@ -1,7 +1,7 @@
-import RunIn from './element.js'
+import RunSnip from './element.js'
 
 const start = () => {
-	customElements.define('run-in', RunIn)
+	customElements.define('run-snip', RunSnip)
 }
 
 export default start
