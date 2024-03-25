@@ -1,4 +1,4 @@
-/*! @remino/runsnip v0.1.0 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
+/*! runsnip v0.1.1 | (c) 2022-2024 Rémino Rem <https://remino.net/> | ISC Licence */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :

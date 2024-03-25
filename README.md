@@ -36,7 +36,7 @@ You can either clone the repo, download the [latest release file](https://github
 git clone git@github.com:remino/runsnip.git
 
 # Install using npm
-npm add @remino/runsnip
+npm add runsnip
 ```
 
 [Back to top](#runsnip)

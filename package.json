@@ -49,7 +49,7 @@
 	],
 	"license": "ISC",
 	"main": "dist/runsnip.cjs",
-	"name": "@remino/runsnip",
+	"name": "runsnip",
 	"scripts": {
 		"css:build": "npx sass --load-path=node_modules/ assets/css/:.build/css/runsnip/",
 		"css:watch": "npx sass --watch --load-path=node_modules/ assets/css/:.build/css/runsnip/",
@@ -61,5 +61,5 @@
 		"test": "npx jasmine"
 	},
 	"type": "module",
-	"version": "0.1.0"
+	"version": "0.1.1"
 }
