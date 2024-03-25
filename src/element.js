@@ -7,6 +7,7 @@ class RunSnip extends HTMLElement {
 		this.htmlEl = selOrCreate(this.getAttribute('html'), 'div')
 		this.cssEl = selOrCreate(this.getAttribute('css'), 'style')
 		this.jsEl = selOrCreate(this.getAttribute('js'), 'script')
+		this.headEl = selOrCreate(this.getAttribute('head'), 'head')
 		this.outputEl = selOrCreate(this.getAttribute('output'), 'output')
 		this.appendEl = sel(this.getAttribute('append'))
 		this.submitEl = selOrCreate(this.getAttribute('submit'), 'button')
@@ -33,6 +34,10 @@ class RunSnip extends HTMLElement {
 
 	get html() {
 		return this.htmlEl.value || this.htmlEl.innerHTML
+	}
+
+	get head() {
+		return this.headEl.value || this.headEl.innerHTML
 	}
 
 	get css() {
@@ -68,6 +73,7 @@ class RunSnip extends HTMLElement {
 		this.outputEl.innerHTML = ''
 		this.outputEl.appendChild(iframe)
 
+		iframe.contentDocument.head.innerHTML = this.head
 		iframe.contentDocument.head.appendChild(style)
 		iframe.contentDocument.body.innerHTML = this.html
 		iframe.contentDocument.body.appendChild(script)
