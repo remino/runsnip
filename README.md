@@ -19,8 +19,6 @@ Small library to run snippets of HTML, CSS, and JavaScript in place.
 
 ## About
 
-https://user-images.githubusercontent.com/29999/210556744-519eccd4-27c2-4f58-a9a3-37f2837338b8.mp4
-
 **RunSnip** is a small library that allows you to run snippets of HTML, CSS, and JavaScript in place. Write your code in your HTML page as plain text, and have this library run it on the page for you.
 
 [Back to top](#runsnip)
