@@ -86,14 +86,14 @@ export default [
 		},
 		plugins: pluginsCompact,
 	},
-	{
-		...options,
-		input: 'assets/js/index.js',
-		output: {
-			file: '.build/js/runsnip/script.js',
-			format: 'umd',
-			name: 'runsnip',
-		},
-		plugins: pluginsCompact,
-	},
+// 	{
+// 		...options,
+// 		input: 'assets/js/index.js',
+// 		output: {
+// 			file: '.build/js/runsnip/script.js',
+// 			format: 'umd',
+// 			name: 'runsnip',
+// 		},
+// 		plugins: pluginsCompact,
+// 	},
 ]

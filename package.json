@@ -5,8 +5,10 @@
 	},
 	"browser": "dist/runsnip.cjs",
 	"dependencies": {
-		"@lopatnov/rollup-plugin-uglify": "^2.1.5",
-		"@remino/reslib": "git+ssh://terabako/~/git/remino/reslib.git#v0.3.28",
+		"@lopatnov/rollup-plugin-uglify": "^2.1.5"
+	},
+	"description": "Small library to run snippets of HTML, CSS, and JavaScript in place.",
+	"devDependencies": {
 		"@rollup/plugin-commonjs": "^24.1.0",
 		"@rollup/plugin-node-resolve": "^15.0.1",
 		"@rollup/plugin-terser": "^0.4.4",
@@ -32,7 +34,6 @@
 		"terser": "^5.19.2",
 		"yaml": "^2.3.1"
 	},
-	"description": "Small library to run snippets of HTML, CSS, and JavaScript in place.",
 	"exports": {
 		"import": "./dist/runsnip.mjs",
 		"require": "./dist/runsnip.cjs"

@@ -1,19 +1,4 @@
-require 'date'
-require 'middleman-reslib/date'
-require 'middleman-reslib/external_link_popup'
-require 'middleman-reslib/i18n'
-require 'middleman-reslib/lazyload_images'
-require 'middleman-reslib/minify'
-require 'middleman-reslib/title'
-require 'middleman-reslib/url'
-
-activate :i18n
-activate :reslib_date
-activate :reslib_external_link_popup
-activate :reslib_i18n
-activate :reslib_lazyload_images
-activate :reslib_title
-activate :reslib_url, base_url: app.data.site.url
+require 'terser'
 
 activate :directory_indexes
 activate :livereload
@@ -23,9 +8,40 @@ activate :autoprefixer do |prefix|
 end
 
 configure :build do
-	activate :asset_hash, exts: %w(.css .js)
 	activate :gzip
-	activate :reslib_minify
+	activate :minify_css
+	activate :minify_javascript, compressor: Terser.new
+
+	activate :asset_hash do |config|
+		config.ignore = [
+			/share-.*/,
+		]
+	end
+	
+	after_configuration do
+		use ::HtmlCompressor::Rack,
+			compress_css: true,
+			compress_javascript: true,
+			css_compressor: :yui,
+			enabled: true,
+			javascript_compressor: :yui,
+			preserve_line_breaks: false,
+			preserve_patterns: [],
+			remove_comments: true,
+			remove_form_attributes: false,
+			remove_http_protocol: false,
+			remove_https_protocol: false,
+			remove_input_attributes: true,
+			remove_intertag_spaces: true,
+			remove_javascript_protocol: true,
+			remove_link_attributes: true,
+			remove_multi_spaces: true,
+			remove_quotes: true,
+			remove_script_attributes: true,
+			remove_style_attributes: true,
+			simple_boolean_attributes: true,
+			simple_doctype: false
+	end
 
 	after_build do |builder|
 		builder.thor.run 'bin/build_brotli build'
@@ -52,10 +68,12 @@ activate :external_pipeline,
 	latency: 2
 
 ignore '.DS_Store'
+ignore '/scrollerful/demo/demo.html'
 
 page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/*.xml', layout: false
+page '/runsnip/index.html', layout: false
 
 prefix = '/runsnip'
 
