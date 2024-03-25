@@ -1,0 +1,65 @@
+{
+	"author": {
+		"name": "Rémino Rem",
+		"url": "https://remino.net/"
+	},
+	"browser": "dist/runin.cjs",
+	"dependencies": {
+		"@lopatnov/rollup-plugin-uglify": "^2.1.5",
+		"@remino/reslib": "git+ssh://terabako/~/git/remino/reslib.git#v0.3.28",
+		"@rollup/plugin-commonjs": "^24.1.0",
+		"@rollup/plugin-node-resolve": "^15.0.1",
+		"@rollup/plugin-terser": "^0.4.4",
+		"autoprefixer": "^10.4.14",
+		"concurrently": "^8.2.0",
+		"cssnano": "^6.0.1",
+		"cssnano-preset-default": "^6.0.1",
+		"eslint": "^8.23.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-no-template-curly-in-string-fix": "^1.0.4",
+		"minify": "^10.3.0",
+		"npm-watch": "^0.11.0",
+		"postcss": "^8.4.25",
+		"postcss-cli": "^10.1.0",
+		"postcss-load-config": "^4.0.1",
+		"postcss-value-parser": "^4.2.0",
+		"rollup": "^3.28.0",
+		"rollup-plugin-postcss": "^4.0.2",
+		"rollup-plugin-sass": "^1.12.20",
+		"sass": "^1.57.1",
+		"smoothscroll-polyfill": "^0.4.4",
+		"terser": "^5.19.2",
+		"yaml": "^2.3.1"
+	},
+	"description": "Small library to run snippets of HTML, CSS, and JavaScript in place.",
+	"exports": {
+		"import": "./dist/runin.mjs",
+		"require": "./dist/runin.cjs"
+	},
+	"files": [
+		"dist/*"
+	],
+	"homepage": "https://remino.net/runin/",
+	"keywords": [
+		"javascript",
+		"css",
+		"animation",
+		"scroll"
+	],
+	"license": "ISC",
+	"main": "dist/runin.cjs",
+	"name": "@remino/runin",
+	"scripts": {
+		"css:build": "npx sass --load-path=node_modules/ assets/css/:.build/css/runin/",
+		"css:watch": "npx sass --watch --load-path=node_modules/ assets/css/:.build/css/runin/",
+		"js:build": "npx rollup --config rollup.config.js",
+		"js:watch": "npx rollup --config rollup.config.js --watch",
+		"lint": "npx eslint",
+		"lint:fix": "npx eslint --fix",
+		"start": "mansite",
+		"test": "npx jasmine"
+	},
+	"type": "module",
+	"version": "0.1.0"
+}
