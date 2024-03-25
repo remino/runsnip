@@ -1,0 +1,10 @@
+- content_for :head
+	= javascript_include_tag 'script', defer: true
+
+form
+	textarea#html <h1 id="title">Red</h1>
+	textarea#css .red { color: red; }
+	textarea#js document.getElementById('title').classList.add('red')
+	
+	run-snip(html="#html" js="#js" css="#css" output="#output" submit="#submit")
+
